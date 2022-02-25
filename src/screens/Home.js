@@ -1,6 +1,8 @@
-import React from "react";
+import React,{useState} from "react";
 import { StyleSheet, View,TouchableOpacity ,Text,Image,Button} from "react-native";
-const Home = ({ navigation }) => {
+
+const Home = ({navigation}) => {
+const {} = useState()
     return (
         < >
             <View style={styles.fondo}>
@@ -8,8 +10,12 @@ const Home = ({ navigation }) => {
                     <Image style={styles.estiloImagen} source={require('../../assets/imagenes/CafriLogo.png')}/>
                 </View>
                 <View style={styles.contenedorBotones}>
-                    <TouchableOpacity style={styles.fondoBotones}>
-                        <Image style={styles.tamañoIconos} source={require("../../assets/imagenes/Icono-Frijol.png")}/>
+                <TouchableOpacity style={styles.fondoBotones} onPress={()=>{navigation.navigate("homeTabCafe")}}>
+                        <Image style={styles.tamañoIconoCafe} source={require("../../assets/imagenes/icono-cafe.png")}/>
+                        <Text>Café</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.fondoBotones} onPress={()=>{navigation.navigate("homeTabFrijol")}}>
+                        <Image style={styles.tamañoIconoFrijol} source={require("../../assets/imagenes/Icono-Frijol.png")}/>
                         <Text>Frijol</Text>
                     </TouchableOpacity>
                 </View>
@@ -43,13 +49,20 @@ const styles = StyleSheet.create({
         width:"70%",
         height:"18%",
         borderRadius:30,
+        marginTop:"10%"
     },
-    tamañoIconos:{
+    tamañoIconoCafe:{
        width:"20%",
        height:"80%",
        marginLeft:"5%",
        marginRight:"20%",        
-    }
+    },
+    tamañoIconoFrijol:{
+        width:"18%",
+        height:"75%",
+        marginLeft:"5%",
+        marginRight:"20%",        
+     }
 
 });
 
