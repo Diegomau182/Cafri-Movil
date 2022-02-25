@@ -5,7 +5,7 @@ import Home from '../../screens/Home'
 import pantallaCafe from "../../screens/pantallaCafe";
 import pantallaFrijol from "../../screens/PantallaFrijol";
 import pantallaApps from "../../screens/pantallaApps"
-import homeTabFrijol from "../../screens/homeTabCafe";
+import homeTabFrijol from "../../screens/homeTabFrijol";
 import homeTabCafe from "../../screens/homeTabCafe";
 
 const Stack = createStackNavigator();

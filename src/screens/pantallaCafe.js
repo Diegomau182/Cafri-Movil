@@ -1,10 +1,11 @@
 import React from "react";
-import { StyleSheet, Image,View} from "react-native";
+import { StyleSheet, Image,View,Text} from "react-native";
 
 
 const pantallaCafe = ({navigation}) =>{
     return(
-        <></>
+        <><Text>Soy la pantalla de cafe</Text>
+        </>
     )
 }
 

@@ -1,33 +1,49 @@
 import React from "react"
 import { StyleSheet,Image,View} from "react-native";
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import pantallaApps from "./pantallaApps";
-import pantallaCafe from "./pantallaCafe";
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import pantallaCafe from "./pantallaCafe"
+import pantallaApps from "./pantallaApps"
+const Tab = createMaterialTopTabNavigator();
 
-
-const Tab = createBottomTabNavigator();
 const homeTabCafe =({navigation})=>{
     return(
         <View style={styles.fondo}>
             <View style={styles.contenedorImagen}>
                 <Image style={styles.estiloImagen} source={require('../../assets/imagenes/CafriLogoVacio.png')}/>
-                    <Tab.Navigator>
-                        <Tab.Screen name="Biblioteca" component={pantallaCafe}/>
-                        <Tab.Screen name="Apps" component={pantallaApps}/>
-                    </Tab.Navigator>
+                <Image style={styles.estiloMenu} source={require('../../assets/imagenes/Menu.png')}/>
             </View>
+            <Tab.Navigator screenOptions={{
+                            tabBarActiveTintColor: '#000',
+                            tabBarLabelStyle: { fontSize: 15 },
+                            tabBarStyle: { backgroundColor: '#9FA617' },
+            }}>
+                <Tab.Screen name="Biblioteca" component={pantallaCafe} />
+                <Tab.Screen name="Apps" component={pantallaApps} />
+            </Tab.Navigator>
         </View>
     )
 }
 const styles = StyleSheet.create({
     fondo:{
+        marginTop:"6%",
+        flex:1,
         backgroundColor:'#F1F1F5',
      },
     contenedorImagen: {
-        backgroundColor:"#9FA617"
+        backgroundColor:"#9FA617",
+        alignItems:"center",
+        flexDirection:"row",
+        height:"15%"
       },
     estiloImagen:{
-        width:"80%",
+        marginLeft:"15%",
+        width:"70%",
+        height:"100%"
+    },
+    estiloMenu:{
+        marginLeft:"4%",
+        marginTop:"-13%",
+        width:"10%",
         height:"30%"
     },
     })
