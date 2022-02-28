@@ -1,18 +1,20 @@
 import React from "react";
-import { StyleSheet} from "react-native";
+import { StyleSheet,View} from "react-native";
 import ComponenteBoton from "../components/componet/ComponenteBoton"
-import pantallaCajaHerramientasCafe from "./pantallaCajaHerramientasCafe";
-
 const pantallaCafe = ({navigation}) =>{
     return(
-        <>
-            <ComponenteBoton titulo="Caja de herramientas para Cafe" descripcion="Guía y documentos para el cultivo del cafe" imagen="icono-caja-de-herrameintas-cafe" callback={()=>{navigation.nivagate("cajaHerramientasCafe")}} />
-        </>
+        <View style={styles.row}>
+        <ComponenteBoton titulo="Caja de herramientas para Cafe" descripcion="Guía y documentos para el cultivo del cafe" imagen="icono-caja-de-herrameintas-cafe" callback={()=>{navigation.nivagate("cajaHerramientasCafe")}} />
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
-    
+    row: {
+        flex:1,
+        flexDirection: "row",
+        flexWrap: "wrap",
+      },
     })
 
 export default pantallaCafe
