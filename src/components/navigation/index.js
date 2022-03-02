@@ -7,7 +7,7 @@ import pantallaFrijol from "../../screens/PantallaFrijol";
 import pantallaApps from "../../screens/pantallaApps"
 import homeTabFrijol from "../../screens/homeTabFrijol";
 import homeTabCafe from "../../screens/homeTabCafe";
-import pantallaCajaHerramientasCafe from "../../screens/pantallaCajaHerramientasCafe";
+import pantallaCajaHerramientasCafe from "../../screens/pantallasCafe/pantallaCajaHerramientasCafe";
 
 const Stack = createStackNavigator();
 const Navigation = () => {

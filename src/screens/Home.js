@@ -1,8 +1,28 @@
-import React,{useState} from "react";
-import { StyleSheet, View,TouchableOpacity ,Text,Image} from "react-native";
-
+import React,{useState,useEffect} from "react";
+import { StyleSheet, View,TouchableOpacity ,Text,Image,ActivityIndicator} from "react-native";
+import * as Font from "expo-font"
 const Home = ({navigation}) => {
-const {} = useState()
+const [fontsLoaded, setFontsLoaded] = useState(false);
+    const loadFontsAsync = async () => {
+        await Font.loadAsync({
+            PublicSans_BoldItalic: require(`../../assets/fonts/PublicSans-BoldItalic.ttf`),
+        }).then(() => {
+        setFontsLoaded(true);
+      });
+    };
+     // Cargar la fuente de manera asíncrona
+    useEffect(() => {
+    loadFontsAsync();
+  }, []);
+  if(fontsLoaded == false)
+  {
+    return (
+        <View style={{flex: 1, justifyContent: "center", alignContent:"center",alignItems:"center"}}>
+        <ActivityIndicator size="large" color="orange" />
+      </View>
+      )
+  }
+  else{
     return (
         < >
             <View style={styles.fondo}>
@@ -12,16 +32,17 @@ const {} = useState()
                 <View style={styles.contenedorBotones}>
                 <TouchableOpacity style={styles.fondoBotones} onPress={()=>{navigation.navigate("homeTabCafe")}}>
                         <Image style={styles.tamañoIconoCafe} source={require("../../assets/imagenes/icono-cafe.png")}/>
-                        <Text>Café</Text>
+                        <Text style={styles.letra}>Café</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.fondoBotones} onPress={()=>{navigation.navigate("homeTabFrijol")}}>
                         <Image style={styles.tamañoIconoFrijol} source={require("../../assets/imagenes/Icono-Frijol.png")}/>
-                        <Text>Frijol</Text>
+                        <Text style={styles.letra}>Frijol</Text>
                     </TouchableOpacity>
                 </View>
             </View>
         </>
     );
+  }
 }
 const styles = StyleSheet.create({
     contenedorImagen: {
@@ -45,7 +66,7 @@ const styles = StyleSheet.create({
     fondoBotones:{
         alignItems:"center",
         flexDirection:"row",
-        backgroundColor:'#F38F1D',
+        backgroundColor:'#E16837',
         width:"70%",
         height:"18%",
         borderRadius:30,
@@ -55,13 +76,17 @@ const styles = StyleSheet.create({
        width:"20%",
        height:"80%",
        marginLeft:"5%",
-       marginRight:"20%",        
+       marginRight:"15%",        
     },
     tamañoIconoFrijol:{
         width:"18%",
         height:"75%",
         marginLeft:"5%",
-        marginRight:"20%",        
+        marginRight:"15%",        
+     },
+     letra:{
+         fontFamily:"PublicSans_BoldItalic",
+         fontSize:25
      }
 
 });

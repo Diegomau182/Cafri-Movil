@@ -1,14 +1,46 @@
 import React,{useState,useEffect} from "react";
 import * as Font from "expo-font"
-import {StyleSheet,TouchableOpacity,View,Text,Image,Dimensions} from "react-native"
+import {StyleSheet,TouchableOpacity,View,Text,Image,Dimensions,ActivityIndicator} from "react-native"
+
 
 const { width, height } = Dimensions.get("window");
 const ComponenteBoton = ({titulo,descripcion,imagen,callback}) =>{
-   const  arrayiconos = [{"icono-caja-de-herrameintas-cafe" : require("../../../assets/imagenes/icono-caja-de-herrameintas-cafe.png")},
-                        
+   const  arrayiconos = [{
+                            name:"icono-caja-de-herrameintas-cafe", 
+                            import: require("../../../assets/imagenes/icono-caja-de-herrameintas-cafe.png")
+                        },
+                         {
+                            name:"catalogo-variedades-cafe",
+                            import: require("../../../assets/imagenes/catalogo-variedades-cafe.png")
+                        },
+                        {
+                            name:"Icono-Demostraciones-Cafe",
+                            import: require("../../../assets/imagenes/Icono-Demostraciones-Cafe.png")
+                        },
+                        {
+                            name:"icono-caja-de-herramientas-frijol",
+                            import: require("../../../assets/imagenes/icono-caja-de-herramientas-frijol.png")
+                        },
+                        {
+                            name:"icono-semilla-frijol",
+                            import: require("../../../assets/imagenes/icono-semilla-frijol.png")
+                        },
+                        {
+                            name:"icono-grano-frijol",
+                            import: require("../../../assets/imagenes/icono-grano-frijol.png")
+                        },
+                        {
+                            name:"Icono-Demostraciones-Frijol",
+                            import: require("../../../assets/imagenes/Icono-Demostraciones-Frijol.png")
+                        },
+                        {
+                            name:"Icono-Comercializacion-de-frijol",
+                            import: require("../../../assets/imagenes/Icono-Comercializacion-de-frijol.png")
+                        },
                         ]
-    const ubi = arrayiconos.find(element => element = imagen);
+    const ubi =  arrayiconos.find( index => index.name == imagen);
     const [fontsLoaded, setFontsLoaded] = useState(false);
+    console.log(ubi.name);
     const loadFontsAsync = async () => {
         await Font.loadAsync({
             PublicSans_BoldItalic: require(`../../../assets/fonts/PublicSans-BoldItalic.ttf`),
@@ -25,7 +57,7 @@ const ComponenteBoton = ({titulo,descripcion,imagen,callback}) =>{
   {
     return (
         <View style={{flex: 1, justifyContent: "center", alignContent:"center",alignItems:"center"}}>
-        <Text>Esperando...</Text>
+        <ActivityIndicator size="large" color="#E16837" />
       </View>
       )
   }
@@ -34,7 +66,7 @@ const ComponenteBoton = ({titulo,descripcion,imagen,callback}) =>{
         <TouchableOpacity onPress={()=>{callback()}}>
             <View style={styles.conteiner}>
                 <View style={styles.conteinerIcono}>
-                <Image style={styles.estiloImagen} source={ubi[imagen]}/>
+                <Image style={styles.estiloImagen} source={ubi.import}/>
                 </View>
                 <View style={styles.conteinerDescripcion}>
                     <Text style={styles.titulo} >{titulo}</Text>
