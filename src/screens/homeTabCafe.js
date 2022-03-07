@@ -25,10 +25,8 @@ const homeTabCafe =({navigation})=>{
 }
 const styles = StyleSheet.create({
     fondo:{
-        marginTop:"6%",
         flex:1,
-        //backgroundColor:'#F1F1F5',
-        backgroundColor: "yellow"
+        backgroundColor:'#F1F1F5',
      },
     contenedorImagen: {
         backgroundColor:"#9FA617",

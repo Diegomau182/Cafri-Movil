@@ -25,7 +25,6 @@ const homeTabFrijol =({navigation})=>{
 }
 const styles = StyleSheet.create({
     fondo:{
-        marginTop:"6%",
         flex:1,
         backgroundColor:'#F1F1F5',
      },
