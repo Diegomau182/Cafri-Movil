@@ -27,13 +27,15 @@ const styles = StyleSheet.create({
     fondo:{
         marginTop:"6%",
         flex:1,
-        backgroundColor:'#F1F1F5',
+        //backgroundColor:'#F1F1F5',
+        backgroundColor: "yellow"
      },
     contenedorImagen: {
         backgroundColor:"#9FA617",
         alignItems:"center",
         flexDirection:"row",
         height:"15%"
+        
       },
     estiloImagen:{
         marginLeft:"15%",

@@ -86,12 +86,14 @@ const styles = StyleSheet.create({
     conteiner:{
         flexDirection:"row",
         width:width*0.75,
-        height:height * 0.17,
+        height:height * 0.10,
         marginTop:"5%",
-        marginLeft:"1%"
+        marginLeft: width*0.05,
     },
     conteinerIcono:{
-        backgroundColor:"red",
+        width:width*0.20,
+        height:height * 0.10,
+
     },
     estiloImagen:{
         width:width*0.20,
@@ -100,8 +102,11 @@ const styles = StyleSheet.create({
 
     },
     conteinerDescripcion:{
-        backgroundColor:"green",
         flexDirection:"column",
+        height: height * 0.10,
+        justifyContent: "center",
+        marginLeft: width*0.02,
+
     },
     titulo: {
         fontFamily:"PublicSans_BoldItalic",
