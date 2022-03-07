@@ -88,19 +88,21 @@ const styles = StyleSheet.create({
         width:width*0.75,
         height:height * 0.17,
         marginTop:"5%",
-        marginLeft:"3%"
+        marginLeft:"10%"
     },
     conteinerIcono:{
-        width:"30%",
-        marginRight:"5%"
+        width:width*0.100,
+        marginRight:"20%"
     },
     estiloImagen:{
-        width:"100%",
-        height:"80%"
+        width:width*0.20,
+        height:height * 0.10,
+        marginRight: "10%",
+
     },
     conteinerDescripcion:{
         flexDirection:"column",
-        marginTop:"2%"
+        marginTop:"7%"
     },
     titulo: {
         fontFamily:"PublicSans_BoldItalic",
