@@ -27,7 +27,9 @@ const pantallaCafe = ({navigation}) =>{
   else{
       return(
         <>
-        <View style={styles.contenedortitulo}><Text style={styles.titulo}>Café</Text></View>
+        <View style={styles.contenedortitulo}>
+          <Text style={styles.titulo}>Café</Text>
+        </View>
         <View style={styles.row}>
             <ComponenteBoton titulo="Caja de herramientas para Cafe" descripcion="Guía y documentos para el cultivo del cafe" imagen="icono-caja-de-herrameintas-cafe" callback={()=>{navigation.navigate("cajaHerramientasCafe")}} />
             <ComponenteBoton titulo="Catálogos de variedades" descripcion="Factores que determinan la calidad del café" imagen ="catalogo-variedades-cafe" callback={()=>{navigation.navigate("cajaHerramientasCafe")}} />
@@ -41,8 +43,7 @@ const pantallaCafe = ({navigation}) =>{
 const styles = StyleSheet.create({
     row: {
         flex:1,
-        flexDirection: "row",
-        flexWrap: "wrap",
+        flexDirection: "column",
       },
     titulo:{
         fontFamily:"PublicSans_BoldItalic",

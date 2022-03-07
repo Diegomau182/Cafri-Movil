@@ -66,7 +66,7 @@ const ComponenteBoton = ({titulo,descripcion,imagen,callback}) =>{
         <TouchableOpacity onPress={()=>{callback()}}>
             <View style={styles.conteiner}>
                 <View style={styles.conteinerIcono}>
-                <Image style={styles.estiloImagen} source={ubi.import}/>
+                    <Image style={styles.estiloImagen} source={ubi.import}/>
                 </View>
                 <View style={styles.conteinerDescripcion}>
                     <Text style={styles.titulo} >{titulo}</Text>
@@ -88,11 +88,10 @@ const styles = StyleSheet.create({
         width:width*0.75,
         height:height * 0.17,
         marginTop:"5%",
-        marginLeft:"10%"
+        marginLeft:"1%"
     },
     conteinerIcono:{
-        width:width*0.100,
-        marginRight:"20%"
+        backgroundColor:"red",
     },
     estiloImagen:{
         width:width*0.20,
@@ -101,8 +100,8 @@ const styles = StyleSheet.create({
 
     },
     conteinerDescripcion:{
+        backgroundColor:"green",
         flexDirection:"column",
-        marginTop:"7%"
     },
     titulo: {
         fontFamily:"PublicSans_BoldItalic",
