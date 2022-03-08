@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     conteinerIcono:{
         width:width*0.20,
         height:height * 0.10,
-        marginLeft: "2%"
+        marginLeft:"-2%"
 
     },
     estiloImagen:{

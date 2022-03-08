@@ -53,9 +53,7 @@ const styles = StyleSheet.create({
         width:width*0.75,
         height:height * 0.05,
         marginTop:"5%",
-        marginLeft: width*0.05,
-
-
+        marginLeft: width*0.01,
     },
     conteinerNumero:{
         width: "20%",
@@ -65,7 +63,8 @@ const styles = StyleSheet.create({
     textoNumero:{
         fontFamily:"PublicSans_BoldItalic",
         fontSize: 20,
-        textAlign:"center"
+        textAlign:"center",
+        color:"#707070"
     },
     estiloImagen:{
         width:width*0.20,
@@ -76,13 +75,13 @@ const styles = StyleSheet.create({
     conteinerDescripcion:{
         flexDirection:"column",
         justifyContent: "center",
-        
-
+        width: width*0.70,
     },
     titulo: {
         fontFamily:"PublicSans_BoldItalic",
         fontSize: 15,
         textAlign:"justify",
+
       },
 
 })
