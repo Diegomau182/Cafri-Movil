@@ -1,5 +1,7 @@
-import React from "react"
+import React,{useState,useEffect}  from "react"
 import {Text,View,StyleSheet,Image,TouchableOpacity} from "react-native"
+import * as Font from "expo-font"
+import ComponenteGuia from "../../components/componet/ComponenteGuia"
 
 const pantallaCajaHerramientasCafe = ({navigation}) =>{
     return(
@@ -9,33 +11,54 @@ const pantallaCajaHerramientasCafe = ({navigation}) =>{
                     <Image style={styles.tamañoFlecha} source={require('../../../assets/imagenes/flecha.png')}/>
             </TouchableOpacity>
         </View>
-        <View>
-            <Text>soy la pantalla de caja de herramientas cafe</Text>
+
+        <View style={styles.contenedortitulo}>
+            <Text style={styles.titulo}>Caja de herramientas para café</Text>
         </View>
+        <View style={styles.row}>
+            <ComponenteGuia titulo="Guia#1: Control de calidad en el beneficiado húmedo del café. "  imagen="1" callback={()=>{navigation.navigate("guiaN1")}} />
+           </View>
         </View>
     )
 }
 const styles = StyleSheet.create({
+    row: {
+        flex:1,
+        flexDirection: "column",
+      },
     fondo:{
-        marginTop:"6%",
         flex:1,
         backgroundColor:'#F1F1F5',
      },
      contenedorNavegacion: {
-        marginTop:"1%",
         backgroundColor:"#9FA617",
         alignItems:"flex-start",
         flexDirection:"row",
-        height:"10%"
+        height:"15%"
       },
     tamañoFlecha:{
-        marginLeft:"2%",
-        width:"90%",
-        height:"100%"
+        marginLeft:"20%",
+        width:"60%",
+        height:"30%",
+        marginTop: "70%"
     },
     flecha:{
         marginLeft:"1%",
-        width:"20%"
+        width:"20%",
+        height:"100%",
+    },
+    titulo:{
+        fontFamily:"PublicSans_BoldItalic",
+        fontSize: 20,
+        alignItems:"center",
+        justifyContent:"center"
+    },
+    contenedortitulo:{
+        marginLeft:"5%",
+        marginTop:"5%",
+        width:"90%",
+        height:"5%",
+        alignItems:"center"
     }
 
 })

@@ -8,6 +8,7 @@ import pantallaApps from "../../screens/pantallaApps"
 import homeTabFrijol from "../../screens/homeTabFrijol";
 import homeTabCafe from "../../screens/homeTabCafe";
 import pantallaCajaHerramientasCafe from "../../screens/pantallasCafe/pantallaCajaHerramientasCafe";
+import guiaN1 from "../../screens/pantallasCafe/Guias/guiaN1";
 
 const Stack = createStackNavigator();
 const Navigation = () => {
@@ -21,6 +22,7 @@ const Navigation = () => {
                 <Stack.Screen name="pantallaFrijol" component={pantallaFrijol}/>
                 <Stack.Screen name="pantallaApps" component={pantallaApps}/>
                 <Stack.Screen name="cajaHerramientasCafe" component={pantallaCajaHerramientasCafe}/>
+                <Stack.Screen name="guiaN1" component={guiaN1}/>
             </Stack.Navigator>   
         </NavigationContainer>
     )
