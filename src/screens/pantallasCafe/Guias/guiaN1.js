@@ -1,12 +1,22 @@
 import React,{useState,useEffect} from "react";
-import { StyleSheet,View,ActivityIndicator,Text,ImageBackground,Image,Dimensions} from "react-native";
+import { StyleSheet,View,ActivityIndicator,Text,ImageBackground,Image,Dimensions,TouchableOpacity} from "react-native";
+import {NavigationActions} from "react-navigation"
 import * as Font from "expo-font"
 import ComponenteListaGuias from "../../../components/componet/ComponenteListaGuias";
+import Navigation from "../../../components/navigation";
 const { width, height } = Dimensions.get("window");
 
 
 const guiaN1 = ({navigation}) =>{
     const [fontsLoaded, setFontsLoaded] = useState(false);
+    const navigateToScreen = (route, params) => {
+      const navigateAction = NavigationActions.navigate({
+        routeName: route,
+        params: params
+      });
+      navigation.dispatch(navigateAction);
+      }
+      
     const loadFontsAsync = async () => {
         await Font.loadAsync({
             PublicSans_BoldItalic: require(`../../../../assets/fonts/PublicSans-BoldItalic.ttf`),
@@ -32,7 +42,9 @@ const guiaN1 = ({navigation}) =>{
         <View style={styles.contenedorImagen}>
            
             <ImageBackground style={styles.estiloImagen} source={require('../../../../assets/imagenes/pruebafondoguia.jpg')}>
-               <Image style={styles.tamañoFlecha} source={require('../../../../assets/imagenes/flecha.png')}/>
+                <TouchableOpacity style={styles.flecha} onPress={()=>{navigation.navigate("cajaHerramientasCafe")}}>
+                  <Image style={styles.tamañoFlecha} source={require('../../../../assets/imagenes/flecha.png')}/>
+                </TouchableOpacity>
               </ImageBackground>
         </View>
         
@@ -43,11 +55,11 @@ const guiaN1 = ({navigation}) =>{
         </View>
         <View style={styles.row}>
             <View></View>
-            <ComponenteListaGuias titulo="Presentación"  numero="01" callback={()=>{navigation.navigate("cajaHerramientasCafe")}} />
+            <ComponenteListaGuias titulo="Presentación"  numero="01" callback={()=>{navigation.navigate("pantallaInfoTI",{title:"hola soy presentacion"})}} />
             <View style = {styles.lineStyle}/>
-            <ComponenteListaGuias titulo="¿Qué es café de calidad?"  numero="02" callback={()=>{navigation.navigate("cajaHerramientasCafe")}} />
+            <ComponenteListaGuias titulo="¿Qué es café de calidad?"  numero="02" callback={()=>{navigation.navigate("pantallaInfoTI",{title:"caja de herramientas"})}}/>
             <View style = {styles.lineStyle}/>
-            <ComponenteListaGuias titulo="Flujograma del café"  numero="03" callback={()=>{navigation.navigate("cajaHerramientasCafe")}} />
+            <ComponenteListaGuias titulo="Flujograma del café"  numero="03" callback={()=>{navigation.navigate("pantallaInfoTI",{title:"Flujograma cafe"})}}/>
             <View style = {styles.lineStyle}/>
             <ComponenteListaGuias titulo="Porcentajes para medir la calidad del cae en el corte"  numero="04" callback={()=>{navigation.navigate("cajaHerramientasCafe")}} />
             <View style = {styles.lineStyle}/>
@@ -106,6 +118,10 @@ const styles = StyleSheet.create({
       shadowOffset: {width: 2, height: 3},
       shadowOpacity: 0.50,
       elevation: 1
+    },
+    flecha:{
+      width:width*1,
+        height:height*0.30,
     },
     lineStyle:{
       borderWidth: 0.1,
