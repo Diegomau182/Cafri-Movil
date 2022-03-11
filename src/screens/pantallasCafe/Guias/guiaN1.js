@@ -45,7 +45,7 @@ const guiaN1 = ({navigation}) =>{
           
         </View>
         <View style={styles.row}>            
-            <ComponenteListaGuias titulo={guiaN1Info[0].name}  numero={guiaN1Info[0].numero} callback={()=>{navigation.navigate("pantallaInfoT",guiaN1Info[0].contenido)}} />
+            <ComponenteListaGuias titulo={guiaN1Info[0].name}  numero={guiaN1Info[0].numero} callback={()=>{navigation.navigate("pantallaInfoT",guiaN1Info[0].contenido)}}/>
             <View style = {styles.lineStyle}/>
             <ComponenteListaGuias titulo="¿Qué es café de calidad?"  numero="02" callback={()=>{navigation.navigate("pantallaInfoTI",{title:"caja de herramientas"})}}/>
             <View style = {styles.lineStyle}/>
