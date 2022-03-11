@@ -1,5 +1,5 @@
 const guiaN1Info =[{
-    name:"presentacion",
+    name:"presentación",
     numero: "01",
     contenido:{
                 title:"Presentación TECHNOSERVE",
@@ -11,7 +11,7 @@ MAS 2.0 pretende incrementar la productividad mediante asistencia técnica, uso 
 }
 },
 {
-    name:"cafe de calidad",
+    name:"¿Qué es café de calidad?",
     numero:"02",
     contenido:{
                 title:"Presentación TECHNOSERVE",

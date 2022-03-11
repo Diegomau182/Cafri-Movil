@@ -34,7 +34,11 @@ const pantallaInfoT =({navigation:{goBack},route})=>{
         <View style={styles.fondo}>
             <View style={styles.contenedorNavegacion}>
             <TouchableOpacity style={styles.flecha} onPress={()=>{goBack()}}>
-                    <Image style={styles.tamañoFlecha} source={require('../../assets/imagenes/flecha.png')}/>
+                <Image style={styles.tamañoFlecha} source={require('../../assets/imagenes/flecha.png')}/>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.compartir}>
+                <Image style={styles.tamañoCompatir} source={require('../../assets/imagenes/compatir.png')}/>
+                <Text>Compartir</Text>
             </TouchableOpacity>
             </View>
             <View style={styles.contenedortitulo}>
@@ -76,6 +80,20 @@ const styles = StyleSheet.create({
         marginLeft:"1%",
         width:"20%",
         height:"100%",
+    },
+    tamañoCompatir:{
+        marginLeft:"20%",
+        width:"60%",
+        height:"30%",
+        marginTop: "70%"
+    },
+    compartir:{
+        marginLeft:"60%",
+        width:"20%",
+        height:"100%",
+        alignContent:"flex-end",
+        flexDirection:"column",
+        justifyContent:"center"
     },
     titulo:{
         fontFamily:"PublicSans_BoldItalic",

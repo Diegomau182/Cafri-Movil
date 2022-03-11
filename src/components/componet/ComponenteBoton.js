@@ -91,13 +91,13 @@ const styles = StyleSheet.create({
         marginLeft: width*0.05,
     },
     conteinerIcono:{
-        width:width*0.23,
-        height:height * 0.11,
+        width:width*0.20,
+        height:height * 0.10,
 
     },
     estiloImagen:{
-        width:width*0.23,
-        height:height * 0.11,
+        width:width*0.20,
+        height:height * 0.10,
         marginRight: "10%",
 
     },
