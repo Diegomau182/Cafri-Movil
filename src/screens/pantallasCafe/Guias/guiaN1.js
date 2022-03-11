@@ -2,7 +2,7 @@ import React,{useState,useEffect} from "react";
 import { StyleSheet,View,ActivityIndicator,Text,ImageBackground,Image,Dimensions,TouchableOpacity} from "react-native";
 import * as Font from "expo-font"
 import ComponenteListaGuias from "../../../components/componet/ComponenteListaGuias";
-import presentacion from "../../../informacion/cafe/infoGuiaN1/presentacion"
+import guiaN1Info from "../../../informacion/cafe/infoGuiaN1"
 const { width, height } = Dimensions.get("window");
 
 
@@ -45,7 +45,7 @@ const guiaN1 = ({navigation}) =>{
           
         </View>
         <View style={styles.row}>            
-            <ComponenteListaGuias titulo="Presentación"  numero="01" callback={()=>{navigation.navigate("pantallaInfoT",presentacion)}} />
+            <ComponenteListaGuias titulo="Presentación"  numero="01" callback={()=>{navigation.navigate("pantallaInfoT",guiaN1Info[0].contenido)}} />
             <View style = {styles.lineStyle}/>
             <ComponenteListaGuias titulo="¿Qué es café de calidad?"  numero="02" callback={()=>{navigation.navigate("pantallaInfoTI",{title:"caja de herramientas"})}}/>
             <View style = {styles.lineStyle}/>
