@@ -1,5 +1,6 @@
 const guiaN1Info =[{
     name:"presentacion",
+    numero: "01",
     contenido:{
                 title:"Presentación TECHNOSERVE",
                 info:`TechnoServe Inc., es una organización internacional que trabaja con personas emprendedoras del mundo en desarrollo para crear fincas, negocios y sectores económicos más competitivos. Con más de 16 años de presencia en Honduras, TechnoServe ha ejecutado proyectos para desarrollo de los sectores agrícolas, agroindustrial, agromercados y emprendedurismo que han impactado la vida de más de 53,500 personas en todo el país al 2018.
@@ -11,6 +12,7 @@ MAS 2.0 pretende incrementar la productividad mediante asistencia técnica, uso 
 },
 {
     name:"cafe de calidad",
+    numero:"02",
     contenido:{
                 title:"Presentación TECHNOSERVE",
                 info:`TechnoServe Inc., es una organización internacional que trabaja con personas emprendedoras del mundo en desarrollo para crear fincas, negocios y sectores económicos más competitivos. Con más de 16 años de presencia en Honduras, TechnoServe ha ejecutado proyectos para desarrollo de los sectores agrícolas, agroindustrial, agromercados y emprendedurismo que han impactado la vida de más de 53,500 personas en todo el país al 2018.
