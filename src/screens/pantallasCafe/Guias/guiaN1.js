@@ -47,9 +47,9 @@ const guiaN1 = ({navigation}) =>{
         <View style={styles.row}>            
             <ComponenteListaGuias titulo={guiaN1Info[0].name}  numero={guiaN1Info[0].numero} callback={()=>{navigation.navigate("pantallaInfoT",guiaN1Info[0].contenido)}}/>
             <View style = {styles.lineStyle}/>
-            <ComponenteListaGuias titulo="¿Qué es café de calidad?"  numero="02" callback={()=>{navigation.navigate("pantallaInfoTI",{title:"caja de herramientas"})}}/>
+            <ComponenteListaGuias titulo={guiaN1Info[1].name}  numero={guiaN1Info[1].numero}  callback={()=>{navigation.navigate("pantallaInfoTI",guiaN1Info[1].contenido)}}/>
             <View style = {styles.lineStyle}/>
-            <ComponenteListaGuias titulo="Flujograma del café"  numero="03" callback={()=>{navigation.navigate("pantallaInfoTI",{title:"Flujograma cafe"})}}/>
+            <ComponenteListaGuias titulo={guiaN1Info[2].name}  numero={guiaN1Info[2].numero} callback={()=>{navigation.navigate("pantallaInfoTITI",guiaN1Info[2].contenido)}}/>
             <View style = {styles.lineStyle}/>
             <ComponenteListaGuias titulo="Porcentajes para medir la calidad del cae en el corte"  numero="04" callback={()=>{navigation.navigate("cajaHerramientasCafe")}} />
             <View style = {styles.lineStyle}/>

@@ -8,6 +8,8 @@ const pantallaInfoTI =({navigation:{goBack},route})=>{
     const title = route.params.title
     const info = route.params.info
     const recurso = route.params.import
+    const tituloDos = route.params.titleSecond
+    const InfoDos = route.params.infoSecond
 
     const loadFontsAsync = async () => {
         await Font.loadAsync({
@@ -42,18 +44,27 @@ const pantallaInfoTI =({navigation:{goBack},route})=>{
                 <Text>Compartir</Text>
             </TouchableOpacity>
             </View>
-        </View>
-        <View style={styles.contenedortitulo}>
-                <Text style={styles.titulo}>
-                    {title}
-                </Text>
-            </View>
             <ScrollView style={styles.contenedorInfo}>
+                <View style={styles.contenedortitulo}>
+                    <Text style={styles.titulo}>
+                        {title}
+                    </Text>
+                </View>
                 <Text style={styles.info}>
                     {info}
                 </Text>
                 <Image style={styles.recurso} source={recurso}/>
+
+                <View style={styles.contenedortitulo}>
+                    <Text style={styles.titulo}>
+                        {tituloDos}
+                    </Text>
+                 </View>
+                <Text style={styles.info}>
+                    {InfoDos}
+                </Text>
             </ScrollView>
+        </View>
         </>
     );
   }
@@ -111,15 +122,17 @@ const styles = StyleSheet.create({
     info:{
         textAlign:"center",
         fontSize:"18",
-        fontFamily:"PublicSans_Light"
+        fontFamily:"PublicSans_Light",
+        marginBottom:"3%",
+        marginTop:"3%"
     },
     contenedorInfo:{
         marginLeft:"5%",
-        marginRight:"5%"
+        marginRight:"5%",
     },
     recurso:{
-        width:width * 0.80,
-        height:height * 0.20
+        width:width * 0.90,
+        height:height * 0.10
     }
 })
 

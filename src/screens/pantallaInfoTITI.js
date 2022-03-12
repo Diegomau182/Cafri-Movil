@@ -43,19 +43,19 @@ const pantallaInfoTITI =({navigation:{goBack},route})=>{
                 <Text>Compartir</Text>
             </TouchableOpacity>
             </View>
-        </View>
-        <View style={styles.contenedortitulo}>
+            <View style={styles.contenedortitulo}>
                 <Text style={styles.titulo}>
                     {title}
-                    <Image style={styles.recurso} source={recursoUno}/>
                 </Text>
             </View>
             <ScrollView style={styles.contenedorInfo}>
+            <Image style={styles.recursoUno} source={recursoUno}/>
                 <Text style={styles.info}>
                     {info}
                 </Text>
-                <Image style={styles.recurso} source={recursoDos}/>
+                <Image style={styles.recursoDos} source={recursoDos}/>
             </ScrollView>
+        </View>
         </>
     );
   }
@@ -113,15 +113,23 @@ const styles = StyleSheet.create({
     info:{
         textAlign:"center",
         fontSize:"18",
-        fontFamily:"PublicSans_Light"
+        fontFamily:"PublicSans_Light",
+        marginBottom:"3%",
+        marginTop:"3%",
+        color:"black"
     },
     contenedorInfo:{
         marginLeft:"5%",
         marginRight:"5%"
+
     },
-    recurso:{
+    recursoUno:{
+        width:width * 0.90,
+        height:height * 0.12
+    },
+    recursoDos:{
         width:width * 0.80,
-        height:height * 0.20
+        height:height * 0.15
     }
 })
 
