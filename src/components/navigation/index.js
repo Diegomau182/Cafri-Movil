@@ -12,6 +12,8 @@ import guiaN1 from "../../screens/pantallasCafe/Guias/guiaN1";
 import pantallaInfoT from "../../screens/pantallaInfoT";
 import pantallaInfoTI from "../../screens/pantallaInfoTI";
 import pantallaInfoTITI from "../../screens/pantallaInfoTITI";
+import pantallaImg from "../../screens/pantallaImg";
+import pantallaTITImg from "../../screens/pantallaTITImg";
 
 const Stack = createStackNavigator();
 const Navigation = () => {
@@ -29,6 +31,8 @@ const Navigation = () => {
                 <Stack.Screen name="pantallaInfoT" component={pantallaInfoT}/>
                 <Stack.Screen name="pantallaInfoTI" component={pantallaInfoTI}/>
                 <Stack.Screen name="pantallaInfoTITI" component={pantallaInfoTITI}/>
+                <Stack.Screen name="pantallaImg" component={pantallaImg}/>
+                <Stack.Screen name="pantallaTITImg" component={pantallaTITImg}/>
             </Stack.Navigator>   
         </NavigationContainer>
     )

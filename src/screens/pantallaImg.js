@@ -3,15 +3,11 @@ import {Text,View,StyleSheet,Image,TouchableOpacity,ActivityIndicator, Dimension
 import * as Font from "expo-font"
 const { width, height } = Dimensions.get("window");
 import { PDFDownloadLink}  from "@react-pdf/renderer";
-import ComponenteVistaTI from "../components/componet/ComponenteVistaTI";
 
-const pantallaInfoTI =({navigation:{goBack},route})=>{
+const pantallaImg =({navigation:{goBack},route})=>{
     const [fontsLoaded, setFontsLoaded] = useState(false);
     const title = route.params.title
-    const info = route.params.info
     const recurso = route.params.import
-    const tituloDos = route.params.titleSecond
-    const InfoDos = route.params.infoSecond
 
     const loadFontsAsync = async () => {
         await Font.loadAsync({
@@ -41,42 +37,25 @@ const pantallaInfoTI =({navigation:{goBack},route})=>{
             <TouchableOpacity style={styles.flecha} onPress={()=>{goBack()}}>
                 <Image style={styles.tamañoFlecha} source={require('../../assets/imagenes/flecha.png')}/>
             </TouchableOpacity>
-            <PDFDownloadLink style={{marginLeft:"60%",
-                                    width:"20%",
-                                    height:"100%",
-                                    alignContent:"flex-end",
-                                    flexDirection:"column",
-                                    justifyContent:"center"}} document={<ComponenteVistaTI title={title} info={info} recurso={recurso} tituloDos={tituloDos} InfoDos={InfoDos}/>} 
-                                    fileName={title}>
-                <Image style={styles.tamañoCompatir} source={require('../../assets/imagenes/compatir.png')}/>
-                <Text>Compartir</Text>
-            </PDFDownloadLink>
-            </View>
-            <ScrollView style={styles.contenedorInfo}>
-                <View style={styles.contenedortitulo}>
-                    <Text style={styles.titulo}>
-                        {title}
-                    </Text>
-                </View>
-                <Text style={styles.info}>
-                    {info}
-                </Text>
-                <Image style={styles.recurso} source={recurso}/>
 
-                <View style={styles.contenedortitulo}>
-                    <Text style={styles.titulo}>
-                        {tituloDos}
-                    </Text>
-                 </View>
-                <Text style={styles.info}>
-                    {InfoDos}
+            </View>
+            <View style={styles.contenedortitulo}>
+                <Text style={styles.titulo}>
+                    {title}
                 </Text>
+            </View>
+            <ScrollView style={styles.contenedorImg}>
+                <View style={styles.contenedorRec}>
+                    <Image style={styles.img} source={recurso}/>
+                        
+                </View>
             </ScrollView>
         </View>
         </>
     );
   }
 }
+
 
 const styles = StyleSheet.create({
     fondo:{
@@ -124,26 +103,25 @@ const styles = StyleSheet.create({
         marginLeft:"5%",
         marginTop:"5%",
         width:"90%",
-        height:"15%",
-        alignItems:"center",
-        textAlign:"center"
+        height:"5%",
+        alignItems:"center"
     },
-    info:{
-        textAlign:"center",
-        fontSize:"18",
-        fontFamily:"PublicSans_Light",
-        marginBottom:"3%",
-        marginTop:"3%",
-    },
-    contenedorInfo:{
+
+    contenedorImg:{
         marginLeft:"5%",
         marginRight:"5%",
+
     },
-    recurso:{
+    contenedorRec:{
         width:width * 0.90,
-        height:height * 0.10
-    }
+        height:height * 0.20,
+    },
+
+    img:{
+        width:width * 0.90,
+        height:height * 0.55,
+        marginTop:"10%"
+    },
 })
 
-
-export default pantallaInfoTI
+export default pantallaImg

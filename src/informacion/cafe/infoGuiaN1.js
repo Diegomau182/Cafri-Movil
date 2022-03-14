@@ -38,7 +38,43 @@ Etapas o fases del beneficiado húmedo:
 Cosecha/corte selectivo, clasificado en sifón o criba, recibo, despulpado, clasificado en criba o zaranda, fermentación, lavado, clasificado en canal de correteo, secado y almacenado.`,
                importSecond:require('../../../assets/imagenes/guias/guiaN1-flujograma-del-cafe-N2.png')
 }
-}
+},
+{
+    name:"Porcentajes para medir la calidad del caé en el corte",
+    numero: "04",
+    contenido:{
+            title: "Porcentajes para medir la calidad del caé en el corte",
+            import:require('../../../assets/imagenes/guias/Porcentajes para medir la calidad del caé en el corte.png')
+
+    }
+
+},
+
+{
+    name: "Despulpado de café",
+    numero: "05",
+    contenido:{
+        title:"Despulpado de café",
+        info: `Consiste en el desprendimiento de la pulpa del fruto de café maduro, através de medios mecánicos por presión y fricción, aprovechando las propiedades lubricantes del mucilago (miel). En este proceso es importante el estado de madurez del fruto y su uniformidad de tamaño`,
+        titleSecond:"¿Cómo puede mantener la calidad del café en el despulpado?",
+        import: require('../../../assets/imagenes/guias/Despulpado del cafe1.png'),
+        import2: require('../../../assets/imagenes/guias/Despulpado del cafe2.png')
+
+    }
+},
+{
+    name: "Secado de café",
+    numero: "07",
+    contenido:{
+        title:"Secado de café",
+        info: `Consiste en el proceso de eliminacion de agua(deshidratación) del grano pergamino humedo de 50 a 55% hasta llevarlo al 10-12% de humedad, este se puede hacer a través de medios naturales aporvechandi los rayos solares o por medios mecánicos a través de secadoras rotativas horizontales tipo guardiola. El secado debe ser lento, constante y continuo.`,
+        titleSecond:"",
+        import: require('../../../assets/imagenes/guias/Secado de café1.png'),
+        import2: require('../../../assets/imagenes/guias/Secado de café2.png')
+
+    }
+},
+
 
 ]
 

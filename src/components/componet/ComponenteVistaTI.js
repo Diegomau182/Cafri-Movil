@@ -44,9 +44,9 @@ const styles = StyleSheet.create({
         backgroundColor:'#F1F1F5',
     },
     titulo:{
-        fontSize: 20,
+        fontSize: 18,
         textAlign:"center",
-        fontWeight:"medium"
+        fontWeight:"medium",
     },
     contenedortitulo:{
         marginLeft:"5%",
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         textAlign:"center",
         fontSize:"18",
         marginBottom:"3%",
-        marginTop:"3%"
+        marginTop:"3%",
     },
     contenedorInfo:{
         marginLeft:"5%",
