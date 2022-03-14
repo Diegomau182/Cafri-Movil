@@ -56,7 +56,7 @@ const pantallaInfoTTITITI = ({navigation:{goBack},route}) => {
                                     justifyContent:"center"
             }} document={<ComponenteVistaTTITITI title={title} titleTwo={titleTwo} recursoUno={recursoUno} recursoDos={recursoDos} recursoTres={recursoTres} info={info} infoSecond={infoSecond} infoThird={infoThird} infoQuarter={infoQuarter}/>} fileName={title}>
                 <Image style={styles.tamañoCompatir} source={require('../../assets/imagenes/compatir.png')}/>
-                <Text>Compartir</Text>
+                <Text style={styles.textoCompartir}>Compartir</Text>
             </PDFDownloadLink>
             </View>
             <View style={styles.contenedortitulo}>
@@ -64,13 +64,13 @@ const pantallaInfoTTITITI = ({navigation:{goBack},route}) => {
                     {title}
                 </Text>
             </View>
-            <ScrollView style={styles.contenedorInfo}>
+            <View style={styles.contenedorInfo}>
                 
                 <Text style={styles.info}>
                     {info}
                 </Text>
 
-                <View style={styles.contenedortitulo}>
+                <View style={styles.contenedortitulo2}>
                     <Text style={styles.titulo}>
                         {titleTwo}
                     </Text>
@@ -94,7 +94,7 @@ const pantallaInfoTTITITI = ({navigation:{goBack},route}) => {
 
                 <Image style={styles.recurso} source={recursoTres}/>
             
-            </ScrollView>
+            </View>
         </View>
         </>
     );
@@ -124,10 +124,10 @@ const styles = StyleSheet.create({
         height:"100%",
     },
     tamañoCompatir:{
-        marginLeft:"20%",
+        marginLeft:"10%",
         width:"60%",
         height:"30%",
-        marginTop: "70%"
+        marginTop: "70%",
     },
     compartir:{
         marginLeft:"60%",
@@ -135,7 +135,12 @@ const styles = StyleSheet.create({
         height:"100%",
         alignContent:"flex-end",
         flexDirection:"column",
-        justifyContent:"center"
+        justifyContent:"center",
+    },
+    textoCompartir:{
+        width:"20%",
+        height:"100%",
+        marginLeft:"-15%"
     },
     titulo:{
         fontFamily:"PublicSans_BoldItalic",
@@ -149,7 +154,14 @@ const styles = StyleSheet.create({
         marginTop:"5%",
         width:"90%",
         height:"5%",
-        alignItems:"center"
+        alignItems:"center",
+    },
+    contenedortitulo2:{
+        marginLeft:"5%",
+        marginTop:"5%",
+        width:"90%",
+        height:"10%",
+        alignItems:"center",
     },
     info:{
         textAlign:"center",

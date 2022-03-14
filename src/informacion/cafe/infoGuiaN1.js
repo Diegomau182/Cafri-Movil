@@ -44,7 +44,7 @@ Cosecha/corte selectivo, clasificado en sifón o criba, recibo, despulpado, clas
     numero: "04",
     contenido:{
             title: "Porcentajes para medir la calidad del caé en el corte",
-            import:require('../../../assets/imagenes/guias/Porcentajes para medir la calidad del caé en el corte.png')
+            import:require('../../../assets/imagenes/guias/Porcentajes_para_medir_la_calidad_del_caé_en_el_corte.PNG')
 
     }
 
@@ -72,30 +72,20 @@ Cosecha/corte selectivo, clasificado en sifón o criba, recibo, despulpado, clas
         infoSecond:`Objetivos de la remoción del mucílago
         
 • Facilitar el secamiento.
-
-• Evitar el deterioro de la calidad.
-        
+• Evitar el deterioro de la calidad.        
 • Evitar problemas de tipo mecánico.`,
         infoThird:`
 Factores Importantes
 
 • Temperatura ambiente.
-        
 • Estado de madures de fruto y uniformidad.
-        
 • Despulpado sin agua. 
-
-• Suficiente drenaje de las pilas.
-        
+• Suficiente drenaje de las pilas.     
 • Limpieza diaria de pilas. 
-
-• Calidad del agua.
-        
+• Calidad del agua.     
 • Muestreo constante.`,
         infoQuarter:`• Asegure el drenaje de las pilas.
-
-• Controle continuamente el punto de fermentación. 
-        
+• Controle continuamente el punto de fermentación.      
 • Pruebe el punto de fermento en varios sitios.`,
         import: require('../../../assets/imagenes/guias/Remosión de MucilagoFermentado N1.png'),
         importSecond: require('../../../assets/imagenes/guias/Remosión de MucilagoFermentado N2.png'),

@@ -7,6 +7,7 @@ const ComponenteVistaTTITITI =({title, titleTwo, recursoUno, info, infoSecond, i
           <Page
             size="A4"
           >
+            <View>
              <View style={styles.contenedortitulo}>
                 <Text style={styles.titulo}>
                     {title}
@@ -24,14 +25,16 @@ const ComponenteVistaTTITITI =({title, titleTwo, recursoUno, info, infoSecond, i
                     </Text>
                 </View>
 
+
                 <Text style={styles.info}>
                     {infoSecond}
+                    
                 </Text>
-
                 <Image style={styles.recurso} source={recursoUno}/>
 
                 <Text style={styles.info}>
                     {infoThird}
+                    
                 </Text>
 
                 <Image style={styles.recurso} source={recursoDos}/>
@@ -39,8 +42,9 @@ const ComponenteVistaTTITITI =({title, titleTwo, recursoUno, info, infoSecond, i
                 <Text style={styles.info}>
                     {infoQuarter}
                 </Text>
-                <Image style={styles.recurso} source={recursoTres}/>
+                <Image style={styles.recurso2} source={recursoTres}/>
             
+            </View>
             </View>
           </Page>
         </Document>
@@ -80,9 +84,14 @@ const styles = StyleSheet.create({
 
     },
     recurso:{
-        width:"90%",
-        height:"22%"
+        width:"50%",
+        height:"20%"
     },
+    recurso2:{
+        width:"50%",
+        height:"50%",
+        marginTop:"5%"
+    }
 })
 
 export default ComponenteVistaTTITITI
