@@ -1,6 +1,8 @@
 import React,{useState,useEffect} from "react";
 import {Text,View,StyleSheet,Image,TouchableOpacity,ActivityIndicator, Dimensions,ScrollView} from "react-native"
 import * as Font from "expo-font"
+import { PDFDownloadLink}  from "@react-pdf/renderer";
+import ComponenteVistaTITI from "../components/componet/ComponenteVistaTITI";
 const { width, height } = Dimensions.get("window");
 
 const pantallaInfoTITI =({navigation:{goBack},route})=>{
@@ -38,10 +40,16 @@ const pantallaInfoTITI =({navigation:{goBack},route})=>{
             <TouchableOpacity style={styles.flecha} onPress={()=>{goBack()}}>
                 <Image style={styles.tamañoFlecha} source={require('../../assets/imagenes/flecha.png')}/>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.compartir}>
+            <PDFDownloadLink style={{marginLeft:"60%",
+                                    width:"20%",
+                                    height:"100%",
+                                    alignContent:"flex-end",
+                                    flexDirection:"column",
+                                    justifyContent:"center"}} document={<ComponenteVistaTITI title={title} recursoUno={recursoUno} recursoDos={recursoDos} info={info}/>} 
+                                    fileName={title}>
                 <Image style={styles.tamañoCompatir} source={require('../../assets/imagenes/compatir.png')}/>
                 <Text>Compartir</Text>
-            </TouchableOpacity>
+            </PDFDownloadLink>
             </View>
             <View style={styles.contenedortitulo}>
                 <Text style={styles.titulo}>

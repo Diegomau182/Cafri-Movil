@@ -3,6 +3,7 @@ import { StyleSheet,View,ActivityIndicator,Text,ImageBackground,Image,Dimensions
 import * as Font from "expo-font"
 import ComponenteListaGuias from "../../../components/componet/ComponenteListaGuias";
 import guiaN1Info from "../../../informacion/cafe/infoGuiaN1"
+import { PDFDownloadLink}  from "@react-pdf/renderer";
 const { width, height } = Dimensions.get("window");
 
 

@@ -20,6 +20,7 @@
     "@react-navigation/material-top-tabs": "^6.1.1",
     "@react-navigation/native": "^6.0.8",
     "@react-navigation/stack": "^6.1.1",
+    "@react-pdf/renderer": "^2.1.1",
     "expo": "~44.0.0",
     "expo-font": "^10.0.5",
     "expo-splash-screen": "^0.14.2",
