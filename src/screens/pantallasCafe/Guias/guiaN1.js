@@ -56,11 +56,11 @@ const guiaN1 = ({navigation}) =>{
             <View style = {styles.lineStyle}/>
             <ComponenteListaGuias titulo={guiaN1Info[4].name}  numero={guiaN1Info[4].numero} callback={()=>{navigation.navigate("pantallaTITImg", guiaN1Info[4].contenido)}} />
             <View style = {styles.lineStyle}/>
-            <ComponenteListaGuias titulo="Remoción de Mucilago/Fermentado"  numero="06" callback={()=>{navigation.navigate("cajaHerramientasCafe")}} />
+            <ComponenteListaGuias titulo={guiaN1Info[5].name}  numero={guiaN1Info[5].numero} callback={()=>{navigation.navigate("pantallaInfoTTITITI",guiaN1Info[5].contenido)}} />
             <View style = {styles.lineStyle}/>
-            <ComponenteListaGuias titulo={guiaN1Info[5].name}  numero={guiaN1Info[5].numero} callback={()=>{navigation.navigate("pantallaTITImg", guiaN1Info[5].contenido)}} />
+            <ComponenteListaGuias titulo={guiaN1Info[6].name}  numero={guiaN1Info[6].numero} callback={()=>{navigation.navigate("pantallaTITImg", guiaN1Info[6].contenido)}} />
             <View style = {styles.lineStyle}/>
-            <ComponenteListaGuias titulo="Bibliografia"  numero="08" callback={()=>{navigation.navigate("cajaHerramientasCafe")}} />
+            <ComponenteListaGuias titulo={guiaN1Info[7].name}  numero={guiaN1Info[7].numero} callback={()=>{navigation.navigate("pantallaInfoT",guiaN1Info[7].contenido)}}/>
         </View>
         </>
     )

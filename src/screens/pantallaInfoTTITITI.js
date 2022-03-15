@@ -1,15 +1,24 @@
 import React,{useState,useEffect} from "react";
 import {Text,View,StyleSheet,Image,TouchableOpacity,ActivityIndicator, Dimensions,ScrollView} from "react-native"
 import * as Font from "expo-font"
-import ComponenteVistaImg from "../components/componet/ComponenteVistaImg";
-const { width, height } = Dimensions.get("window");
 import { PDFDownloadLink}  from "@react-pdf/renderer";
+import ComponenteVistaTTITITI from "../components/componet/ComponenteVistaTTITITI";
+const { width, height } = Dimensions.get("window");
 
-const pantallaImg =({navigation:{goBack},route})=>{
+const pantallaInfoTTITITI = ({navigation:{goBack},route}) => {
     const [fontsLoaded, setFontsLoaded] = useState(false);
     const title = route.params.title
-    const recurso = route.params.import
+    const titleTwo = route.params.titleSecond
 
+    const info = route.params.info
+    const infoSecond = route.params.infoSecond
+    const infoThird = route.params.infoThird
+    const infoQuarter = route.params.infoQuarter
+    
+    const recursoUno = route.params.import
+    const recursoDos = route.params.importSecond
+    const recursoTres = route.params.importThird
+    
     const loadFontsAsync = async () => {
         await Font.loadAsync({
             PublicSans_BoldItalic: require(`../../assets/fonts/PublicSans-BoldItalic.ttf`),
@@ -45,7 +54,7 @@ const pantallaImg =({navigation:{goBack},route})=>{
                                     alignContent:"flex-end",
                                     flexDirection:"column",
                                     justifyContent:"center"
-            }} document={<ComponenteVistaImg title={title} recurso={recurso}/>} fileName={title}>
+            }} document={<ComponenteVistaTTITITI title={title} titleTwo={titleTwo} recursoUno={recursoUno} recursoDos={recursoDos} recursoTres={recursoTres} info={info} infoSecond={infoSecond} infoThird={infoThird} infoQuarter={infoQuarter}/>} fileName={title}>
                 <Image style={styles.tamañoCompatir} source={require('../../assets/imagenes/compatir.png')}/>
                 <Text>Compartir</Text>
             </PDFDownloadLink>
@@ -55,18 +64,42 @@ const pantallaImg =({navigation:{goBack},route})=>{
                     {title}
                 </Text>
             </View>
-            <ScrollView style={styles.contenedorImg}>
-                <View style={styles.contenedorRec}>
-                    <Image style={styles.img} source={recurso}/>
-                        
+            <ScrollView style={styles.contenedorInfo}>
+                
+                <Text style={styles.info}>
+                    {info}
+                </Text>
+
+                <View style={styles.contenedortitulo}>
+                    <Text style={styles.titulo}>
+                        {titleTwo}
+                    </Text>
                 </View>
+
+                <Text style={styles.info}>
+                    {infoSecond}
+                </Text>
+
+                <Image style={styles.recurso} source={recursoUno}/>
+
+                <Text style={styles.info}>
+                    {infoThird}
+                </Text>
+
+                <Image style={styles.recurso} source={recursoDos}/>
+
+                <Text style={styles.info}>
+                    {infoQuarter}
+                </Text>
+
+                <Image style={styles.recurso} source={recursoTres}/>
+            
             </ScrollView>
         </View>
         </>
     );
   }
 }
-
 
 const styles = StyleSheet.create({
     fondo:{
@@ -108,7 +141,8 @@ const styles = StyleSheet.create({
         fontFamily:"PublicSans_BoldItalic",
         fontSize: 20,
         alignItems:"center",
-        justifyContent:"center"
+        justifyContent:"center",
+        textAlign:"center"
     },
     contenedortitulo:{
         marginLeft:"5%",
@@ -117,22 +151,23 @@ const styles = StyleSheet.create({
         height:"5%",
         alignItems:"center"
     },
-
-    contenedorImg:{
+    info:{
+        textAlign:"center",
+        fontSize:"18",
+        fontFamily:"PublicSans_Light",
+        marginBottom:"3%",
+        marginTop:"3%",
+        color:"black"
+    },
+    contenedorInfo:{
         marginLeft:"5%",
-        marginRight:"5%",
+        marginRight:"5%"
 
     },
-    contenedorRec:{
+    recurso:{
         width:width * 0.90,
-        height:height * 0.20,
-    },
-
-    img:{
-        width:width * 0.90,
-        height:height * 0.55,
-        marginTop:"10%"
+        height:height * 0.12
     },
 })
 
-export default pantallaImg
+export default pantallaInfoTTITITI

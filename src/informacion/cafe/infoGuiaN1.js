@@ -63,6 +63,46 @@ Cosecha/corte selectivo, clasificado en sifón o criba, recibo, despulpado, clas
     }
 },
 {
+    name: "Remoción de Mucilago/Fermentado",
+    numero: "06",
+    contenido:{
+        title:"Remoción de Mucilago/Fermentado",
+        info: `Consiste en desprender el mucilago(miel) del grano de café pergamino humedo para facilitar el secado de este la remocion se puede hacer a traves de fermentación natural y por medios mecánicos.`,
+        titleSecond:"¿Cómo puede mantener la calidad del café en el fermentado?",
+        infoSecond:`Objetivos de la remoción del mucílago
+        
+• Facilitar el secamiento.
+
+• Evitar el deterioro de la calidad.
+        
+• Evitar problemas de tipo mecánico.`,
+        infoThird:`
+Factores Importantes
+
+• Temperatura ambiente.
+        
+• Estado de madures de fruto y uniformidad.
+        
+• Despulpado sin agua. 
+
+• Suficiente drenaje de las pilas.
+        
+• Limpieza diaria de pilas. 
+
+• Calidad del agua.
+        
+• Muestreo constante.`,
+        infoQuarter:`• Asegure el drenaje de las pilas.
+
+• Controle continuamente el punto de fermentación. 
+        
+• Pruebe el punto de fermento en varios sitios.`,
+        import: require('../../../assets/imagenes/guias/Remosión de MucilagoFermentado N1.png'),
+        importSecond: require('../../../assets/imagenes/guias/Remosión de MucilagoFermentado N2.png'),
+        importThird:require('../../../assets/imagenes/guias/Remosión de MucilagoFermentado N3.png')
+    }
+},
+{
     name: "Secado de café",
     numero: "07",
     contenido:{
@@ -70,9 +110,35 @@ Cosecha/corte selectivo, clasificado en sifón o criba, recibo, despulpado, clas
         info: `Consiste en el proceso de eliminacion de agua(deshidratación) del grano pergamino humedo de 50 a 55% hasta llevarlo al 10-12% de humedad, este se puede hacer a través de medios naturales aporvechandi los rayos solares o por medios mecánicos a través de secadoras rotativas horizontales tipo guardiola. El secado debe ser lento, constante y continuo.`,
         titleSecond:"",
         import: require('../../../assets/imagenes/guias/Secado de café1.png'),
-        import2: require('../../../assets/imagenes/guias/Secado de café2.png')
+        import2: require('../../../assets/imagenes/guias/Secado de café2.png'),
 
     }
+},
+{
+    name:"Bibliografia",
+    numero: "08",
+    contenido:{
+                title:"BIBLIOGRAFIA",
+                info:`1.ANACAFE, Manual de Caficultura, Guatemala, 1998. 
+
+2. ANACAFE, Manual de Beneficiado Húmedo del Café, Guatemala,Edición 2005.
+                
+3. ANACAFE, Guía Técnica de Caficultura, Guatemala, Guatemala, 2006.
+                
+4. IHCAFE, Manual de Caficultura, Tegucigalpa, M.D.C, Honduras, 2001.
+                
+5. IICA/PROMECAFE/AECID, Guia Técnica para el Beneficiado de Café Protegido bajo una Indicación Geográfica o Denominación de Origen, Guatemala, 2010.
+                
+6. IICA/PROMECAFE//BID/AECID, Caracterización del Café de la Indicación Geográfica Cafés del Occidente Hondureño, Honduras, 2011.
+                
+7.IICA/PROMECAFE/BID/AECID, Reglamento de Uso de la Indicación Geográfica Cafés del Occidente Hondureño, Honduras, 2012. 
+
+8. Organismo Hondureño de Normalización, Norma Hondureña, NHN 4.,20 Diciembre 2011.
+                
+9. TechnoServe/BID, Manual de Buenas Prácticas para Cosecha y Beneficiado Húmedo de café de Calidad, Proyecto de Café para Centroamérica, Managua, Nicaragua, 2008. 
+
+10. H. Paz, Manual de Buenas Prácticas Agrícolas y Beneficiado de café de la IG HWC, IICA/PROMECAFE//BID/AECID, Santa Rosa de Copan, Honduras, 2012.`
+}
 },
 
 

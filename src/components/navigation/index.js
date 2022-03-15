@@ -14,6 +14,7 @@ import pantallaInfoTI from "../../screens/pantallaInfoTI";
 import pantallaInfoTITI from "../../screens/pantallaInfoTITI";
 import pantallaImg from "../../screens/pantallaImg";
 import pantallaTITImg from "../../screens/pantallaTITImg";
+import pantallaInfoTTITITI from "../../screens/pantallaInfoTTITITI"
 
 const Stack = createStackNavigator();
 const Navigation = () => {
@@ -33,6 +34,7 @@ const Navigation = () => {
                 <Stack.Screen name="pantallaInfoTITI" component={pantallaInfoTITI}/>
                 <Stack.Screen name="pantallaImg" component={pantallaImg}/>
                 <Stack.Screen name="pantallaTITImg" component={pantallaTITImg}/>
+                <Stack.Screen name="pantallaInfoTTITITI" component={pantallaInfoTTITITI}/>
             </Stack.Navigator>   
         </NavigationContainer>
     )
